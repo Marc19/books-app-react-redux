@@ -1,7 +1,6 @@
 import React from 'react'
 import BookShelf from '../Components-Parts/BookShelf';
 import { connect } from "react-redux";
-import { moveToCurrentlyReading, moveToWantToRead, moveToRead, removeBook } from '../Actions/index';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function MyBooks(props) {
@@ -21,15 +20,6 @@ const mapStateToProps = state => {
     return {myBooks: state.myBooks, booksFromQuery: state.booksFromQuery}
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        moveToCurrentlyReading: payload => dispatch(moveToCurrentlyReading(payload)),
-        moveToWantToRead: payload => dispatch(moveToWantToRead(payload)),
-        moveToRead: payload => dispatch(moveToRead(payload)),
-        removeBook: payload => dispatch(removeBook(payload))
-      };
-}
-
-const ConnectedBooks = connect(mapStateToProps, mapDispatchToProps)(MyBooks);
+const ConnectedBooks = connect(mapStateToProps)(MyBooks);
 
 export default ConnectedBooks
