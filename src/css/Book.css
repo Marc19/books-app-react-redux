@@ -1,0 +1,10 @@
+.card{
+    width: 30rem;
+    height: 22rem;
+}
+
+.bookActions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

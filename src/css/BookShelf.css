@@ -1,0 +1,17 @@
+.bookShelf{
+    margin: 2rem 0;
+}
+
+.horizontalBooks{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    border: 1px solid black;
+    padding: 1rem 0;
+}
+
+.horizontalBooks p{
+    margin-left:auto;
+    margin-right: auto;
+}
